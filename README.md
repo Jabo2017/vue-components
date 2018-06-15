@@ -19,3 +19,29 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# 安装 脚手架
+
+> vue init webpack vue-components
+
+
+## 安装swiper插件
+[文档](https://www.npmjs.com/package/vue-awesome-swiper)
+
+
+npm install vue-awesome-swiper --save
+
+>指定版本安装
+
+npm install vue-awesome-swiper@版本号 --save
+
+
+>查询当前版本号
+npm list vue-awesome-swiper【模块名】
+
+>查询所有版本信息
+npm info vue-awesome-swiper【模块名】
+
+>查询版本号
+npm view vue-awesome-swiper【模块名】  versions
+
