@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <router-link to="/">Counter</router-link>
+    <router-link to="/swiper">Swiper</router-link>
     <router-view :max="max" :min="min"></router-view>
   </div>
 </template>

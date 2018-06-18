@@ -45,3 +45,14 @@ npm info vue-awesome-swiper【模块名】
 >查询版本号
 npm view vue-awesome-swiper【模块名】  versions
 
+
+## 安装lazyload插件
+[文档](https://github.com/hilongjw/vue-lazyload)
+
+npm install vue-lazyload --save-dev
+
+
+
+# 存在的问题？
+
+> 同时使用Swiper插件和lazy插件，当Swiper开启loop时，循环的第一张默认出不来？【待解决】。详见src/components/Swiper.vue

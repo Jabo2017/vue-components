@@ -1,13 +1,10 @@
 <template>
   <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide>I'm Slide 1</swiper-slide>
-    <swiper-slide>I'm Slide 2</swiper-slide>
-    <swiper-slide>I'm Slide 3</swiper-slide>
-    <swiper-slide>I'm Slide 4</swiper-slide>
-    <swiper-slide>I'm Slide 5</swiper-slide>
-    <swiper-slide>I'm Slide 6</swiper-slide>
-    <swiper-slide>I'm Slide 7</swiper-slide>
+    <swiper-slide v-for="(item,index) in imgs":key="index">
+      <img v-lazy="item.img">
+    </swiper-slide>
+
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
     <div class="swiper-button-prev" slot="button-prev"></div>
@@ -30,9 +27,26 @@ export default {
     return {
       swiperOption: {
           pagination: {
-            el: '.swiper-pagination'
-        }
+            el: '.swiper-pagination',
+            clickable:true
+        },
+        lazy:true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+        autoplay:true,
+        //loop:true,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper  
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper  
       },
+
+      imgs:[
+        {img:require('../assets/images/1.jpg')},
+        {img:require('../assets/images/2.jpg')},
+        {img:require('../assets/images/3.jpg')},
+      ],
+
     }
   },
   components: {
@@ -44,6 +58,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 
+@import "../assets/css/swiper-4.3.3.min.css";
+
+.swiper-slide img{
+  max-width: 100%;
+}
 </style>
