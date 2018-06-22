@@ -52,6 +52,22 @@ npm view vue-awesome-swiper【模块名】  versions
 npm install vue-lazyload --save-dev
 
 
+## 组件通信
+
+> 父->子 ：props
+
+> 子->父 ：emit Event
+
+
+
+
+
+
+
+
+
+
+
 
 # 存在的问题？
 

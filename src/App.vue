@@ -1,8 +1,17 @@
 <template>
   <div id="app">
-    <router-link to="/">Counter</router-link>
-    <router-link to="/swiper">Swiper</router-link>
-    <router-view :max="max" :min="min"></router-view>
+    <div class="nav-box">
+      <router-link class="nav-li" to="/">Counter</router-link>
+      <router-link class="nav-li" to="/swiper">Swiper</router-link>
+      <router-link class="nav-li" to="/props">props</router-link>
+    </div>    
+
+    <div class="app-content">
+       <router-view :max="max" :min="min" name="counter"></router-view>
+       <router-view />
+    </div>
+
+    
   </div>
 </template>
 
@@ -19,12 +28,28 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin:0;
+  padding:0;
 }
+
+.nav-box{
+  line-height: 48px;
+  background-color: #f00;
+}
+
+.nav-li{
+  display: inline-block;
+  padding: 6px 14px;
+}
+
+.nav-li:hover{
+  background-color: #f99;
+}
+
+.app-content{
+  padding: 10px 0;
+}
+
+
 </style>
