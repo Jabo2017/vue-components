@@ -56,6 +56,8 @@ npm install vue-lazyload --save-dev
 
 > 父->子 ：props
 
+> 父->子 : ref
+
 > 子->父 ：emit Event
 
 
