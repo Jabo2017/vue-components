@@ -3,7 +3,7 @@
 	  <h5>{{title}}</h5>    
 	  <p>子接收的信息：{{msg}}</p>
 	  <p>子接收的数字：{{number}}</p>
-	  <button @click="sendMsg">先父组件发送消息</button> 
+	  <button @click="sendMsg">向父组件发送消息</button> 
   </div>
 </template>
 

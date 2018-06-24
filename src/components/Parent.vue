@@ -11,6 +11,7 @@
 
      <br />
      <!-- 父调用子： https://www.cnblogs.com/whyue/p/6374589.html -->
+     <!-- https://segmentfault.com/a/1190000009052002 -->
      <button @click="parentCall">父调用子</button>
 
      <!-- 父组件接收子组件 @sendMsg = "getMsg"    ref="Child" 组件名-->
