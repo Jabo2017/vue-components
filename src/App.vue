@@ -6,6 +6,7 @@
       <router-link class="nav-li" to="/props">props</router-link>
       <router-link class="nav-li" to="/slots">slots</router-link>
       <router-link class="nav-li" to="/view">view</router-link>
+      <router-link class="nav-li" to="/animation">animation</router-link>
     </div>    
 
     <div class="app-content">
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+// import './assets/css/animate.css';
 export default {
   name: 'App',
   data(){
@@ -30,6 +32,7 @@ export default {
 </script>
 
 <style>
+/*@import './assets/css/animate.css';*/
 *{
   margin:0;
   padding:0;

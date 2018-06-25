@@ -5,6 +5,8 @@ import Swiper from '@/components/Swiper'
 import Parent from '@/components/Parent'
 import Slots from '@/components/slots/Parent'
 import View from '@/components/keepalive/Big'
+import Animation from '@/components/animation/Animation'
+
 
 Vue.use(Router)
 
@@ -38,6 +40,11 @@ export default new Router({
       path: '/view',
       name: 'view',
       component: View
+    },
+    {
+      path: '/animation',
+      name: 'animation',
+      component: Animation
     }
   ],
   mode:"history",  //消除#号
