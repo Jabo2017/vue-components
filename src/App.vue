@@ -4,6 +4,8 @@
       <router-link class="nav-li" to="/">Counter</router-link>
       <router-link class="nav-li" to="/swiper">Swiper</router-link>
       <router-link class="nav-li" to="/props">props</router-link>
+      <router-link class="nav-li" to="/slots">slots</router-link>
+      <router-link class="nav-li" to="/view">view</router-link>
     </div>    
 
     <div class="app-content">

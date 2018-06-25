@@ -61,6 +61,21 @@ npm install vue-lazyload --save-dev
 > 子->父 ：emit Event
 
 
+## slots 卡槽
+>slot-scope 子传父数据
+
+
+## keep-alive  缓存不活动是、组件实例
+```
+	<keep-alive>
+		<component :is="currentView"></component>
+	</keep-alive>
+```
+
+
+
+
+
 
 
 
