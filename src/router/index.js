@@ -6,7 +6,7 @@ import Parent from '@/components/Parent'
 import Slots from '@/components/slots/Parent'
 import View from '@/components/keepalive/Big'
 import Animation from '@/components/animation/Animation'
-
+import Directive from '@/components/directive/Directive'
 
 Vue.use(Router)
 
@@ -45,6 +45,11 @@ export default new Router({
       path: '/animation',
       name: 'animation',
       component: Animation
+    },
+    {
+      path: '/directive',
+      name: 'directive',
+      component: Directive
     }
   ],
   mode:"history",  //消除#号
