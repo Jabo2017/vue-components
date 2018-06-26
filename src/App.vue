@@ -8,6 +8,8 @@
       <router-link class="nav-li" to="/view">view</router-link>
       <router-link class="nav-li" to="/animation">animation</router-link>
       <router-link class="nav-li" to="/directive">自定义组件</router-link>
+      <router-link class="nav-li" to="/filter">filter</router-link>
+      <router-link class="nav-li" to="/axios">Axios</router-link>
     </div>    
 
     <div class="app-content">

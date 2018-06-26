@@ -7,6 +7,8 @@ import Slots from '@/components/slots/Parent'
 import View from '@/components/keepalive/Big'
 import Animation from '@/components/animation/Animation'
 import Directive from '@/components/directive/Directive'
+import Filter from '@/components/filter/Filter'
+import Axios from '@/components/axios/Axios'
 
 Vue.use(Router)
 
@@ -50,6 +52,16 @@ export default new Router({
       path: '/directive',
       name: 'directive',
       component: Directive
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: Filter
+    },
+    {
+      path: '/axios',
+      name: 'axios',
+      component: Axios
     }
   ],
   mode:"history",  //消除#号

@@ -79,9 +79,12 @@ npm install vue-lazyload --save-dev
 ## 自定义指令 directive
 > v-name
 
+
+
 # 存在的问题？
 
 > 同时使用Swiper插件和lazy插件，当Swiper开启loop时，循环的第一张默认出不来？【待解决】。详见src/components/Swiper.vue
+
 
 # 扩展 require 与 import
 [参考1](https://www.cnblogs.com/sunshq/p/7922182.html)
