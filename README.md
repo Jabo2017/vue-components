@@ -104,7 +104,7 @@ Axios.defaults.transformRequest = [function(data) {
 ```
 注释掉 main.js 中的 Axios.defaults.baseURL 配置
 
-> config/index.js 中配置
+ config/index.js 中配置
 	// 代理：跨域处理
     proxyTable: {
         "/api":{
