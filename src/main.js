@@ -10,9 +10,11 @@ import Axios from "axios"
 //挂载到原型
 Vue.prototype.$axios = Axios
 
+Vue.prototype.HOST = '/api'
+
 
 //全局配置
-Axios.defaults.baseURL = "http://www.fetv.cn/fe/website/ashx/";
+//Axios.defaults.baseURL = "https://api.douban.com";
 Axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
 // 发送请求前处理request的数据
 Axios.defaults.transformRequest = [function(data) {

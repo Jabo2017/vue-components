@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 代理：跨域处理
+    proxyTable: {
+        "/api":{
+            target:'https://api.douban.com',
+            changeOrigin:true,
+            pathRewrite:{
+                "^/api":''
+            }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

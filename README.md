@@ -80,6 +80,48 @@ npm install vue-lazyload --save-dev
 > v-name
 
 
+## axios 
+
+> main.js 里面全局配置
+```
+//Axios.defaults.baseURL = "https://api.douban.com";
+
+Axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+
+// 发送请求前处理request的数据
+Axios.defaults.transformRequest = [function(data) {
+  // Do whatever you want to transform the data
+  var newData = '';
+  for (var k in data) {
+    newData += encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) + '&';
+  }
+  return newData;
+}]
+```
+
+## 跨域【代理处理】
+
+```
+注释掉 main.js 中的 Axios.defaults.baseURL 配置
+
+> config/index.js 中配置
+	// 代理：跨域处理
+    proxyTable: {
+        "/api":{
+            target:'https://api.douban.com',  //代理的域名
+            changeOrigin:true,
+            pathRewrite:{
+                "^/api":''
+            }
+        }
+    },
+
+	
+	修改请求路径【参考axios/Axios.vue】
+	格式： /api/+接口后缀路径
+	url:'/api/v2/movie/search', 
+
+```
 
 # 存在的问题？
 

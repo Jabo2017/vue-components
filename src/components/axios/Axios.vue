@@ -18,7 +18,7 @@
 		},
 		methods:{
 			axiosGet(){
-				this.$axios.get('HomePage.ashx?action=getBannerAndHotNews')
+				this.$axios.get('/api/v2/book/1220562')
 				.then(function(response){
 					console.log(response)
 				})
@@ -27,9 +27,9 @@
 				})
 
 				//参数配置
-				this.$axios.get('ActivityType.ashx?action=getOrganActivityType',{
+				this.$axios.get('/api/v2/movie/search',{
 					params:{
-						organId:1
+						q:'张艺谋'
 					}
 				})
 				.then(function(response){
@@ -41,7 +41,7 @@
 			},
 
 			axiosPost(){
-				this.$axios.post('NewsType.ashx?action=getEducationNewsType',{
+				this.$axios.post('/api/v2/book/1220562',{
 					organId:1,
 					pageSize:2
 				})
@@ -67,20 +67,19 @@
 			axiosApi(){
 				this.$axios({
 					method:'post',
-					url:'Organ.ashx?action=getAppSchoolList',
+					url:'/api/v2/movie/search',
 					data:{
-						pageIndex:1,
-                        pageSize:5
+						q:'张艺谋'
 					},
 					timeout: 2000,
-					proxy: {
-					    host: '127.0.0.1',
-					    port: 8081,
-					    auth:{
-					      username: 'Jabo',
-					      password: '123' 
-					    }
-  					},
+					// proxy: {
+					//     host: '127.0.0.1',
+					//     port: 8081,
+					//     auth:{
+					//       username: 'Jabo',
+					//       password: '123' 
+					//     }
+  			// 		},
 				})
 				.then(function(response){
 					console.log(response)
