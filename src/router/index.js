@@ -9,6 +9,12 @@ import Animation from '@/components/animation/Animation'
 import Directive from '@/components/directive/Directive'
 import Filter from '@/components/filter/Filter'
 import Axios from '@/components/axios/Axios'
+import RouterComponent from '@/components/router/Router'
+import Java from '@/components/router/Java'
+import Web from '@/components/router/Web'
+import Params from '@/components/router/Params'
+import P1 from '@/components/router/P1'
+import P2 from '@/components/router/P2'
 
 Vue.use(Router)
 
@@ -62,6 +68,23 @@ export default new Router({
       path: '/axios',
       name: 'axios',
       component: Axios
+    },
+    {
+      path: '/router',
+      name: 'routerComponent',
+      component: RouterComponent,
+      redirect:'/router/java',
+      children:[
+        {path:'java',name:'java',component:Java},
+        {path:'web',name:'web',component:Web},
+        {path:'params',name:'params',component:Params,
+           redirect:'params/p1',
+           children:[
+              {path:'p1/:p',name:'p1',component:P1},
+              {path:'p2/:p',name:'p2',component:P2}
+           ]
+        }
+      ]
     }
   ],
   mode:"history",  //消除#号

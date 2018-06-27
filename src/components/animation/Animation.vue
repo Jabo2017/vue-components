@@ -30,7 +30,7 @@
 <script>
 	//require('../../assets/css/animate.css');
 	export default{
-		name:'animation',
+		name:'Animation',
 		data(){
 			return{
 				show:false,

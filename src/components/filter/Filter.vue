@@ -7,7 +7,7 @@
 
 <script>
 	export default{
-		name:'filter',
+		name:'FilterComponent',
 		data(){
 			return{
 				price:0
@@ -21,7 +21,6 @@
 				if(price < 10){
 					return "0" + price;
 				}
-
 				return price;
 			}
 		}
