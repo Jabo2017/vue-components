@@ -99,6 +99,10 @@ Axios.defaults.transformRequest = [function(data) {
 }]
 ```
 
+
+
+
+## proxytable 代理
 ## 跨域【代理处理】
 
 ```
@@ -122,6 +126,7 @@ Axios.defaults.transformRequest = [function(data) {
 	url:'/api/v2/movie/search', 
 
 ```
+
 
 # 存在的问题？
 

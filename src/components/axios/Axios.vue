@@ -18,7 +18,7 @@
 		},
 		methods:{
 			axiosGet(){
-				this.$axios.get('/api/v2/book/1220562')
+				this.$axios.get('http://www.fetv.cn/fe/website/ashx/Banner.ashx?action=getBanner&bannerType=homePage')
 				.then(function(response){
 					console.log(response)
 				})
