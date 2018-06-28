@@ -1,7 +1,9 @@
 <template>
 	<div class="nav-box">
       <!-- <router-link class="nav-li" to="/">Counter</router-link> -->
-      <router-link class="nav-li" v-for="item in navList" :key="item.id" :to="item.path">{{item.name}}</router-link>
+
+      <!-- 参考exact :https://router.vuejs.org/zh/api/#exact-->
+      <router-link exact class="nav-li" v-for="item in navList" :key="item.id" :to="item.path">{{item.name}}</router-link>
 		
 	<!-- <router-link class="nav-li" v-for="item in navList" :key="item.id" :to="{path:item.path}">{{item.name}}</router-link> -->
 
@@ -24,6 +26,7 @@
 					{path:'/filter',name:'filter'},
 					{path:'/axios',name:'Axios'},
 					{path:'/router',name:'router'},
+					{path:'/element',name:'Element组件'},
 				]
 			}
 		}

@@ -7,8 +7,6 @@
        <router-view :max="max" :min="min" name="counter"></router-view>
        <router-view />
     </div>
-
-    
   </div>
 </template>
 
@@ -41,5 +39,10 @@ export default {
   padding: 10px 0;
 }
 
+.router-link-active{
+  color: #fff;
+  background-color: #f00;
+
+}
 
 </style>

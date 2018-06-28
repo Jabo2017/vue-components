@@ -100,8 +100,6 @@ Axios.defaults.transformRequest = [function(data) {
 ```
 
 
-
-
 ## proxytable 代理
 ## 跨域【代理处理】
 
@@ -126,6 +124,42 @@ Axios.defaults.transformRequest = [function(data) {
 	url:'/api/v2/movie/search', 
 
 ```
+
+## router 路由 [参考](https://router.vuejs.org/zh/api/#router-%E6%9E%84%E5%BB%BA%E9%80%89%E9%A1%B9)
+
+> 配置： router/index.js 
+
+```
+//全局配置 <router-link> 的默认“激活 class 类名”
+linkActiveClass:"router-link-active",  //默认值
+
+exact "是否激活" 默认类名
+<router-link exact class="paramsLi" to="/router/params/p1/1">P1 : params</router-link>
+
+```
+
+## 动态路由
+> ./components/router/Params.vue
+
+
+## 模拟路由
+> ./components/router/Simulation.vue
+
+
+## 路由参数
+> $route.params.p     p 参数名   /p
+
+> $route.query.p      p 参数名   ?p=
+
+
+
+## element 组件 [参考](http://element.eleme.io/#/zh-CN/component/quickstart)
+> 安装 : npm i element-ui -S
+
+> 按需加载： npm install babel-plugin-component -D
+
+> 修改babel  
+
 
 
 # 存在的问题？

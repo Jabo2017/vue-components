@@ -4,6 +4,7 @@
 			<router-link class="leftNav" to="/router/java">Java</router-link>
 			<router-link class="leftNav" to="/router/web">web前端</router-link>
 			<router-link class="leftNav" to="/router/params">参数做法</router-link>
+			<router-link class="leftNav" to="/router/simulation">模拟跳转</router-link>
 		</div>
 		<div class="main">
 			<router-view />

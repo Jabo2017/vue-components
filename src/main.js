@@ -6,13 +6,22 @@ import App from './App'
 //路由导入
 import router from './router'
 import lazy from './lazy'
-
 import Axios from "axios"
+
+//element
+import { Button, Select,Row ,Icon ,Option, TimePicker,TimeSelect, DatePicker} from 'element-ui'
+Vue.use(Button)
+Vue.use(Select)
+Vue.use(Row)
+Vue.use(Icon)
+Vue.use(Option)
+Vue.use(TimePicker)
+Vue.use(TimeSelect)
+Vue.use(DatePicker)
 
 //挂载到原型
 Vue.prototype.$axios = Axios
 
-Vue.prototype.HOST = '/api'
 
 
 //全局配置

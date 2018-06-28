@@ -1,3 +1,5 @@
+// 参考：https://router.vuejs.org/zh/api/#router-%E6%9E%84%E5%BB%BA%E9%80%89%E9%A1%B9
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import Counter from '@/components/Counter'  //@查看 build/webpack.base.conf.js
@@ -15,10 +17,16 @@ import Web from '@/components/router/Web'
 import Params from '@/components/router/Params'
 import P1 from '@/components/router/P1'
 import P2 from '@/components/router/P2'
+import Simulation from '@/components/router/Simulation'
+import Element from '@/components/element/Element'
+
 
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",  //消除#号
+  //全局配置 <router-link> 的默认“激活 class 类名”
+  linkActiveClass:"router-link-active",  //默认值
   routes: [
     {
       path: '/',
@@ -73,19 +81,26 @@ export default new Router({
       path: '/router',
       name: 'routerComponent',
       component: RouterComponent,
-      redirect:'/router/java',
+      redirect:'router/java',
       children:[
         {path:'java',name:'java',component:Java},
         {path:'web',name:'web',component:Web},
         {path:'params',name:'params',component:Params,
-           redirect:'params/p1',
+           redirect:'params/p1/1',
            children:[
               {path:'p1/:p',name:'p1',component:P1},
-              {path:'p2/:p',name:'p2',component:P2}
+              {path:'p2',name:'p2',component:P2}
            ]
-        }
+        },
+        {path:'simulation',name:'simulation',component:Simulation},
       ]
+    },
+    {
+      path:'/element',
+      name:'element',
+      component:Element
     }
   ],
-  mode:"history",  //消除#号
+
+
 })
