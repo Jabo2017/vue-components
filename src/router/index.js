@@ -19,7 +19,7 @@ import P1 from '@/components/router/P1'
 import P2 from '@/components/router/P2'
 import Simulation from '@/components/router/Simulation'
 import Element from '@/components/element/Element'
-
+import VxParent from '@/components/vuex/VxParent'
 
 Vue.use(Router)
 
@@ -99,6 +99,11 @@ export default new Router({
       path:'/element',
       name:'element',
       component:Element
+    },
+    {
+      path:'/vuex',
+      name:'vuex',
+      component:VxParent
     }
   ],
 

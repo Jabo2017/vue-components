@@ -27,6 +27,7 @@
 					{path:'/axios',name:'Axios'},
 					{path:'/router',name:'router'},
 					{path:'/element',name:'Element组件'},
+					{path:'/vuex',name:'vuex'},
 				]
 			}
 		}

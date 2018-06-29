@@ -161,6 +161,58 @@ exact "是否激活" 默认类名
 > 修改babel  
 
 
+## vuex [参考](https://vuex.vuejs.org/zh/)
+> 安装：npm install vuex --save
+
+```
+//Vuex
+
+Vuex 状态管理
+   view ->(dispath) Action ->( commit )Mutation ->(Mutate) State -> View
+   注：Action 不是必须的，如果有异步操作才可能用到Action
+
+Actions:
+    Action 提交的是 Mutation，而不是直接变更状态
+    Action 可以包含任意异步操作
+
+
+store/index.js 中配置
+
+main.js
+import store from './store'
+
+new Vue({
+  el: '#app',
+  router,
+  store,
+  components: { App },
+  template: '<App/>'
+})
+
+mutations: 更改 Vuex 的 store 中的状态的唯一方法； 组件中 this.$store.commit("mutation中的事件")
+
+actions: 可以异步执行 mutations
+
+getters：类似computed 
+
+modules ： 分模块调用  this.$store.state.模块名
+
+// mapxxx 调用方法
+import { mapState } from 'vuex'
+
+//方法等也类型 methods:{ ...mapXXX([]) }
+computed: {
+    ...mapState([
+      'label'
+    ]),
+},
+
+
+```
+
+### 概念
+> vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+
 
 # 存在的问题？
 

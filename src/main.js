@@ -8,6 +8,9 @@ import router from './router'
 import lazy from './lazy'
 import Axios from "axios"
 
+//Vuex
+import store from './store'
+
 //element
 import { Button, Select,Row ,Icon ,Option, TimePicker,TimeSelect, DatePicker} from 'element-ui'
 Vue.use(Button)
@@ -54,6 +57,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
