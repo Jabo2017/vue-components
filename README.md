@@ -87,7 +87,8 @@ main.js
 
 
 ## keep-alive  缓存不活动的组件实例
-```
+
+```html
 	<keep-alive>
 		<component :is="currentView"></component>
 	</keep-alive>
@@ -104,7 +105,8 @@ main.js
 ## axios 
 
 > main.js 里面全局配置
-```
+
+```javascript
 //Axios.defaults.baseURL = "https://api.douban.com";
 
 Axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -124,7 +126,7 @@ Axios.defaults.transformRequest = [function(data) {
 ## proxytable 代理
 ## 跨域【代理处理】
 
-```
+```javascript
 注释掉 main.js 中的 Axios.defaults.baseURL 配置
 
  config/index.js 中配置
@@ -150,7 +152,7 @@ Axios.defaults.transformRequest = [function(data) {
 
 > 配置： router/index.js 
 
-```
+```html
 //全局配置 <router-link> 的默认“激活 class 类名”
 linkActiveClass:"router-link-active",  //默认值
 
