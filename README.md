@@ -187,7 +187,7 @@ exact "是否激活" 默认类名
 ## vuex [参考](https://vuex.vuejs.org/zh/)
 > 安装：npm install vuex --save
 
-```html
+```javascript
 //Vuex
 
 Vuex 状态管理
