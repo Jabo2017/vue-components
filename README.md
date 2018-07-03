@@ -60,7 +60,7 @@ npm install vue-lazyload --save-dev
 
 > 子->父 ：emit Event
 
-> 平级组件通信
+> 平级组件通信 [参考](https://www.cnblogs.com/place-J-P/p/7586819.html)
 
 ```javascript
 main.js
