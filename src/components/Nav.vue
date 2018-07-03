@@ -28,6 +28,7 @@
 					{path:'/router',name:'router'},
 					{path:'/element',name:'Element组件'},
 					{path:'/vuex',name:'vuex'},
+					{path:'/slcommunication',name:'组件平级通信'},
 				]
 			}
 		}

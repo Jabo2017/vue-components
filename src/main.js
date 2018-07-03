@@ -12,7 +12,7 @@ import Axios from "axios"
 import store from './store'
 
 //element
-import { Button, Select,Row ,Icon ,Option, TimePicker,TimeSelect, DatePicker} from 'element-ui'
+import { Button, Select, Row, Icon, Option, TimePicker, TimeSelect, DatePicker } from 'element-ui'
 Vue.use(Button)
 Vue.use(Select)
 Vue.use(Row)
@@ -25,6 +25,9 @@ Vue.use(DatePicker)
 //挂载到原型
 Vue.prototype.$axios = Axios
 
+//平级组件通信：通信中间件[事件通道]
+let eventChannel = new Vue();
+Vue.prototype.$eventChannel = eventChannel;
 
 
 //全局配置

@@ -60,6 +60,27 @@ npm install vue-lazyload --save-dev
 
 > 子->父 ：emit Event
 
+> 平级组件通信
+
+```javascript
+main.js
+  //1、平级组件通信：通信中间件[事件通道]
+      let eventChannel = new Vue();
+      Vue.prototype.$eventChannel = eventChannel;
+
+  //2、自定义事件 
+      this.$eventChannel.$emit("slcommunication1",{msg:'我是slcommunication1'})
+
+  //3、响应自定义事件  
+    mounted(){
+      //监听this.$root.eventChannel 自定义事件
+      this.$eventChannel.$on("slcommunication1",function(data){
+        alert(data.msg +",被slcommunication2调用！")
+      })
+    },
+
+```
+
 
 ## slots 卡槽
 >slot-scope 子传父数据

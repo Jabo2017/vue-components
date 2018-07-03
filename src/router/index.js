@@ -4,7 +4,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Counter from '@/components/Counter'  //@查看 build/webpack.base.conf.js
 import Swiper from '@/components/Swiper'
-import Parent from '@/components/Parent'
+import Parent from '@/components/fscommunication/Parent'
 import Slots from '@/components/slots/Parent'
 import View from '@/components/keepalive/Big'
 import Animation from '@/components/animation/Animation'
@@ -20,6 +20,7 @@ import P2 from '@/components/router/P2'
 import Simulation from '@/components/router/Simulation'
 import Element from '@/components/element/Element'
 import VxParent from '@/components/vuex/VxParent'
+import SLCommunication from '@/components/slcommunication/slcommunication'
 
 Vue.use(Router)
 
@@ -104,7 +105,15 @@ export default new Router({
       path:'/vuex',
       name:'vuex',
       component:VxParent
-    }
+    },
+    {
+      path: '/slcommunication',
+      name: 'slcommunication',
+      component: SLCommunication
+    },
+
+
+
   ],
 
 
