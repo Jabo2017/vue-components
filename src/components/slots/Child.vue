@@ -23,6 +23,7 @@ export default {
   },
   mounted(){
     this.initFunc();
+    console.log(this.data)
   },
   methods:{
     initFunc(){
