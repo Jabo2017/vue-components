@@ -2,7 +2,8 @@
 	<div class="big">
 	<!--  {{ currentView }}  -->		
 		<!--不记住状态的方式： <component :is="currentView"></component> -->
-
+		<component :is="currentView"></component>
+		
 		<!-- 记住状态的方式：缓存不活动的组件实例 -->
 		<keep-alive>
 			<component :is="currentView"></component>
